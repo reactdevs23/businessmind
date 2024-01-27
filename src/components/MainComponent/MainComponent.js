@@ -7,31 +7,38 @@ const MainComponent = ({
   link,
   title,
   info,
+  img,
   subtitle,
+
   bookmarkIcon,
   background,
   id,
   totalData,
+  primaryColor,
+  secondaryColor,
 }) => {
   return (
     <section
       className={styles.wrapper}
-      style={{ fontFamily: fontFamily, "--background": background }}
+      style={{
+        fontFamily: fontFamily,
+        "--background": background,
+        "--primaryColor": primaryColor,
+        "--secondaryColor": secondaryColor,
+      }}
     >
       <div className={styles.container}>
         <div className={styles.header}>
           <h3 className={styles.name}>{name}</h3>
 
-          <a href="#/" className={styles.link}>
-            {link}
-          </a>
+          <div className={styles.idContainer}>#{id}</div>
         </div>
-
         <h2
           className={styles.title}
           dangerouslySetInnerHTML={{ __html: title }}
         ></h2>
-        {info && <p className={styles.info}>{info}</p>}
+        {info && <p className={styles.info}>{info}</p>}{" "}
+        {img && <img src={img} alt="#" className={styles.img} />}
         {subtitle && (
           <div className={styles.bookmarkContainer}>
             <h3
@@ -41,7 +48,6 @@ const MainComponent = ({
             <img src={bookmarkIcon} alt="#" className={styles.bookmarkIcon} />
           </div>
         )}
-
         {totalData !== id && (
           <button className={styles.button}>
             Swip{" "}
