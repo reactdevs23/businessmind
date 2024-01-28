@@ -4,7 +4,7 @@ import styles from "./MainComponent.module.css";
 const MainComponent = ({
   fontFamily,
   name,
-  link,
+
   title,
   info,
   img,

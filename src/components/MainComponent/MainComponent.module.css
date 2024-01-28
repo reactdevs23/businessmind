@@ -34,10 +34,10 @@
 }
 .idContainer {
   height: 100%;
-  background: #000;
+  background: var(--secondaryColor);
   border-radius: 18px;
   text-align: center;
-  color: var(--secondaryColor);
+  color: var(--primaryColor);
 
   padding: 10px 15px;
   display: flex;
@@ -91,8 +91,8 @@
 .button {
   font-size: 20px;
   color: var(--primaryColor);
-  background: #fff;
-  border: 2px solid #000;
+  background: var(--secondaryColor);
+  border: 2px solid var(--primaryColor);
   outline: none;
   cursor: pointer;
   display: flex;
